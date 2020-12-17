@@ -1,24 +1,34 @@
 # README
+List of routes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+GET    /projects/:project_id/tasks(.:format)                                                             tasks#index      
+POST   /projects/:project_id/tasks(.:format)                                                             tasks#create     
+GET    /projects/:project_id/tasks/new(.:format)                                                         tasks#new        
+GET    /projects/:project_id/tasks/:id/edit(.:format)                                                    tasks#edit       
+GET    /projects/:project_id/tasks/:id(.:format)                                                         tasks#show       
+PATCH  /projects/:project_id/tasks/:id(.:format)                                                         tasks#update     
+PUT    /projects/:project_id/tasks/:id(.:format)                                                         tasks#update     
+DELETE /projects/:project_id/tasks/:id(.:format)                                                         tasks#destroy    
+GET    /projects(.:format)                                                                               projects#index
+POST   /projects(.:format)                                                                               projects#create
+GET    /projects/new(.:format)                                                                           projects#new
+GET    /projects/:id/edit(.:format)                                                                      projects#edit
+GET    /projects/:id(.:format)                                                                           projects#show
+PATCH  /projects/:id(.:format)                                                                           projects#update
+PUT    /projects/:id(.:format)                                                                           projects#update
+DELETE /projects/:id(.:format)                                                                           projects#destroy
+GET    /users/sign_in(.:format)                                                                          devise/sessions#new
+POST   /users/sign_in(.:format)                                                                          devise/#create
+DELETE /users/sign_out(.:format)                                                                         devise/sessions#destroy
+GET    /users/password/new(.:format)                                                                     devise/passwords#new
+GET    /users/password/edit(.:format)                                                                    devise/passwords#edit
+PATCH  /users/password(.:format)                                                                         devise/passwords#update
+PUT    /users/password(.:format)                                                                         devise/passwords#update
+POST   /users/password(.:format)                                                                         devise/passwords#create
+GET    /users/cancel(.:format)                                                                           devise/registrations#cancel
+GET    /users/sign_up(.:format)                                                                          devise/registrations#new
+GET    /users/edit(.:format)                                                                             devise/registrations#edit
+PATCH  /users(.:format)                                                                                  devise/registrations#update
+PUT    /users(.:format)                                                                                  devise/registrations#update
+DELETE /users(.:format)                                                                                  devise/registrations#destroy
+POST   /users(.:format)                                                                                  devise/registrations#create
